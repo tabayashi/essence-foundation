@@ -57,5 +57,8 @@
     "thunkify": "^2.1.2",
     "vinyl-buffer": "^1.0.1",
     "workspace": "git+https://github.com/tabayashi/workspace.git"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
   }
 }

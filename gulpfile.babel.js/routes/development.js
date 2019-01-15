@@ -32,7 +32,7 @@ module.exports = (runner, tasks, configure) => {
   // Data files
   // ---------------------------------------------------------------------------
   job('data.build', () =>
-    src('data/**/*', {base: 'data'})
+    src('sources/data/**/*', {base: 'sources/data'})
       .pipe(tasks.plumber())
       .pipe(tasks.newer({dest: docroot}))
       .pipe(dest(docroot)));
@@ -105,8 +105,8 @@ module.exports = (runner, tasks, configure) => {
       .pipe(tasks.sourcemaps.init())
       .pipe(tasks.stylus({
         define: {
-           fontsURL: '../fonts',
-          assetsURL: '../assets'
+          fontsURL: '../fonts',
+          mediaURL: '../assets'
         },
         include: ['node_modules', 'styles/data']
       }))
